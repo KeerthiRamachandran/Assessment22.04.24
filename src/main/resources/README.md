@@ -16,7 +16,7 @@ GET
 /assessment/searchByAmountRange
 
 GET
-/assessment/search/amount/{amount}
+/assessment/search/amount/{amount} 
 
 
 

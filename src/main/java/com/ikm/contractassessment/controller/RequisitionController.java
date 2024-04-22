@@ -25,6 +25,7 @@ import com.ikm.contractassessment.contract.RequisitionUpdateRequest;
 import com.ikm.contractassessment.model.Requisition;
 import com.ikm.contractassessment.service.RequisitionService;
 
+//Requisition Controller Class
 @RestController
 @RequestMapping("/assessment")
 @RequiredArgsConstructor
