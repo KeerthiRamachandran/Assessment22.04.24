@@ -34,9 +34,9 @@ public class RequisitionController {
     @SneakyThrows
     @Operation(summary = "Save Requisition Details request")
     @PostMapping(value = { "/save-Requisition-details" })
-    public ResponseEntity<?> saveVoucherDetails(@Valid @RequestBody RequisitionRequest request) {
+    public ResponseEntity<?> saveRequisitionDetails(@Valid @RequestBody RequisitionRequest request) {
         Requisition requisitionDetails = requisitionService.saveRequisitionDetails(request);
-        RequisitionResponse voucherDetailsResponse = RequisitionResponse.builder()
+        RequisitionResponse requisitionDetailsResponse = RequisitionResponse.builder()
                 .id(requisitionDetails.getId())
                 .brn(requisitionDetails.getBrn())
                 .allotmentId(requisitionDetails.getAllotmentId())
@@ -44,7 +44,7 @@ public class RequisitionController {
                 .build();
         return new ResponseEntity<>(
                 Response.builder()
-                        .payload(voucherDetailsResponse)
+                        .payload(requisitionDetailsResponse)
                         .message("Successfully saved")
                         .build(),
                 HttpStatus.OK);
